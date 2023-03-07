@@ -18,7 +18,7 @@ public class CustomBasicAuthFilter extends OncePerRequestFilter {
 
     private static final int BASIC_LENGTH = 6;
     private static final String EXEMPLO_USERNAME = "usuario";
-    private static final String EXEMPLO_PASSWORD = "senha";
+    private static final String EXEMPLO_PASSWORD = "123456";
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
