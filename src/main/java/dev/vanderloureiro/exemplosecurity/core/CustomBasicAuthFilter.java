@@ -37,7 +37,6 @@ public class CustomBasicAuthFilter extends OncePerRequestFilter {
         if (basicAuthsSplit[0].equals(EXEMPLO_USERNAME) && basicAuthsSplit[1].equals(EXEMPLO_PASSWORD)) {
 
             var authToken = new UsernamePasswordAuthenticationToken(basicAuthsSplit[0], null, null);
-            authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authToken);
         }
         filterChain.doFilter(request, response);
